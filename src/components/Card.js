@@ -6,7 +6,7 @@ const Card = (props) => (
       <iframe
         title={props.title}
         width="100%"
-        height="auto"
+        height="250px"
         src={`https://www.youtube.com/embed/${props.videoId}`}
         frameborder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
