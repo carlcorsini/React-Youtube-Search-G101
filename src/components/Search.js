@@ -24,6 +24,11 @@ class Search extends Component {
     this.setState({ searchTerm: event.target.value })
   }
 
+  handleSubmit = event => {
+    event.preventDefault()
+    this.props.searchYoutube(this.state.searchTerm)
+  }
+
   render() {
     const { title } = this.props
     const { searchTerm } = this.state
@@ -32,7 +37,11 @@ class Search extends Component {
       <div>
         <h1>{title}</h1>
 
-        <input onChange={this.handleChange} type="text" />
+        <form onSubmit={this.handleSubmit}>
+          <input onChange={this.handleChange} type="text" />
+          <button type="submit">Submit</button>
+        </form>
+
         <p>{searchTerm}</p>
       </div>
     )

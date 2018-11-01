@@ -9,7 +9,7 @@ class App extends Component {
 
   searchYoutube = term => {
     YTSearch({ key: process.env.REACT_APP_YOUTUBE_API_KEY, term }, videos => {
-      // this.setState({ videos })
+      this.setState({ videos })
       console.log(videos)
     })
   }
