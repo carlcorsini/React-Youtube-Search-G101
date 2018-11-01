@@ -27,7 +27,7 @@ class Search extends Component {
   render() {
     const { title } = this.props
     const { searchTerm } = this.state
-    console.log('re render')
+
     return (
       <div>
         <h1>{title}</h1>
